@@ -103,4 +103,3 @@ function sentence() {
   document.getElementById("italic").innerHTML =
     "(select the buttons in proper order)";
 }
-© 2020 GitHub, Inc.
