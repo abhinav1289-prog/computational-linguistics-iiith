@@ -1,4 +1,6 @@
-var startingvalue, updatedvalue, word;
+var startingvalue;
+var updatedvalue;
+var word;
 $("#reset").hide();
 $("#correct").hide();
 
@@ -110,7 +112,7 @@ const Hindi = [[
   "है वहाँ बड़ी सी एक किताब",
 ] ];
 let Erandom,Hrandom;
-function fun() {
+function funtio() {
  selection = document.getElementById("selectlang");
  let store = "";
   if (selection.value === "English") {
@@ -207,7 +209,7 @@ function reply_click(clicked_id,clicked_value) {
   //alert(sentence);
   }
 }
-function reform() {
+function reformation() {
   for (i = 0; i <= word.length - 1; i++) {
     document.getElementById("btn" + i).style.display = "";
   }
@@ -219,57 +221,41 @@ function reform() {
   $("#reset").hide();
   $("#correct").hide()
 }
-function correctness() {
+function correctsent() {
   let check_sentence=document.getElementById("print").innerHTML
-//  console.log(check_sentence);
-  str_sentence=check_sentence.toString();
-  //alert(sentence);
+    str_sentence=check_sentence.toString();
   console.log(str_sentence);
- //var flag=false;
    if (selection.value=="English") {
-    // console.log(lang);
      for(value in English[Erandom]){
       value=English[Erandom]
-              //console.log(value);
-    //  console.log(value);
       var count=value.length;
       console.log(count);
       for(var i=0;i<count;i++){
         let  temp=value[i]
         console.log(temp);
         if(temp==str_sentence){
-          //flag = true;
           document.getElementById(check).innerHTML="correct sentence";
           break;
-      //console.log(correct);
         }
         else {
           document.getElementById(check).innerHTML="Wrong";
-      //console.log(rng);
   }
 }
 }}
 else if (selection.value==Hindi) {
- // console.log(lang);
   for(value in Hindi[Hrandom]){
    value=Hindi[Hrandom]
-           //console.log(value);
            console.log(value);
    var count=value.length;
    console.log(count);
    for(var i=0;i<count;i++){
      temp=count[i]
-         //console.log(value[i]);
      if(temp==check_sentence){
-       //flag = true;
       consile.log(temp);
        document.getElementById(check).innerHTML="correct sentence";
-       break;
-   //console.log(correct);
-     }
+       break;     }
      else {
        document.getElementById(check).innerHTML="Wrong";
-   //console.log(rng);
 }
 }
 }}
